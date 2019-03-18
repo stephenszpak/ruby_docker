@@ -29,5 +29,14 @@ test:
 
 Then boot up the app via `docker-compose up`
 
+Open another terminal and type this to create a database : `docker-compose run web rake db:create`
 
-Open another terminal and add this to create a database : `docker-compose run web rake db:create`
+Go to `localhost:3000` to see the app home page or use docker-machine (https://docs.docker.com/machine/overview/)
+
+To stop the app type `docker-compose down`
+
+
+When you want to make changes to `docker-compose.yml` run this command after making the changes `docker-compose up --build`
+
+When you want to add to or update the Gemfile run `docker-compose run web bundle install` and then follow that up with `docker-compose up --build`
+
